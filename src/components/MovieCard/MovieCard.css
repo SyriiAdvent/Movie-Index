@@ -1,7 +1,21 @@
 .movie-card {
-  width: 300px;
+  width: 100%;
+  display: flex;
+  margin: 2rem 1rem;
+  border-bottom: solid black 1px;
 }
 
 .movie-card img {
-  width: 100%;
+  width: 300px;
+  margin-bottom: 2rem;
+}
+
+.movie-card h2 {
+  margin-bottom: 0;
+}
+
+.movie-card .card-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
 }

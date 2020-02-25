@@ -26,10 +26,15 @@ const MovieCard = props => {
 
   return (
     <div key={movie.id} className="movie-card">
-      {/* {console.log(posterImages.posters)} */}
+      {console.log(movie)}
       <img src={`${imageURL}${movie.poster_path}`} alt=""/>
-      <h2>{movie.title}</h2>
-      <p>Release Date: {movie.release_date}</p>
+      <div className='card-details'>
+        <h2>{movie.title}</h2>
+        <p>Release Date: {movie.release_date}</p>
+        <div>
+          <p>{movie.overview}</p>
+        </div>
+      </div>
     </div>
   );
 };
