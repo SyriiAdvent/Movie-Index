@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import './MovieCard.css'
+import './MovieCard.css'
 
 const MovieCard = props => {
   const movie = props.movies;

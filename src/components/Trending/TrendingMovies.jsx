@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-import MovieCard from '../MovieCard';
+import MovieCard from '../MovieCard/MovieCard';
 
 const TrendingMovies = props => {
   const popularURL = `https://api.themoviedb.org/3/movie/popular?api_key=${props.apikey}${props.language}`
@@ -16,7 +16,7 @@ const TrendingMovies = props => {
       `${popularURL}${props.apikey}${props.language}&page=${page}`
     )
       .then(response => {
-        console.log(response);
+        // console.log(response);
         setTrendingMovies(response.data.results)
       })
       .catch(error => console.error(`Couldn't retrieve a response...`, error));
