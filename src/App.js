@@ -1,23 +1,17 @@
-import React, { useState } from "react";
-import "./App.css";
-import { Route, Switch, Link } from "react-router-dom";
-import axios from "axios";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-import { API_KEY, LANGUAGE } from './_vendor'
-import TrendingMovies from './components/Trending/TrendingMovies'
-
+import NavBar from "./Components/Navigation/NavBar";
+import NowPlaying from "./Components/NowPlaying/NowPlaying";
 
 function App() {
-  const [language] = useState(LANGUAGE);
-
   return (
-  <div className="App">
-    <Switch>
-      <Route path='/' >
-        <TrendingMovies apikey={API_KEY} language={language} />
-      </Route>
-    </Switch>
-  </div>
+    <div className="App">
+      <Routes>
+        {/* <Route path='/' element={<NavBar />} /> */}
+        <Route path='/' element={<NowPlaying />} />
+      </Routes>
+    </div>
   );
 }
 
